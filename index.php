@@ -61,19 +61,49 @@
                     test 2
                 </div>
                 <div class="box">
-                    test
+                    <div style="align-items: center; display: flex;">
+                        <img src="./assets/humidity.gif" alt="clouds" style="height: 1.5rem; width: 1.5rem;">
+                        <span style="margin-left: .5rem;">Humidity</span>
+                    </div>
+                    <span style="margin-left: 2rem; font-weight: 600; font-size: 1.5rem; line-height: 2rem;">
+                        <?php echo $data["list"]["0"]["humidity"]."%"; ?>
+                    </span>
                 </div>
                 <div class="box">
-                    test
+                    <div style="align-items: center; display: flex;">
+                        <img src="./assets/air-pump.gif" alt="air-pump" style="height: 1.5rem; width: 1.5rem;">
+                    <span style="margin-left: .5rem;">Pressure</span>
+                    </div>
+                    <span style="margin-left: 2rem; font-weight: 600; font-size: 1.5rem; line-height: 2rem;">
+                        <?php echo $data["list"]["0"]["pressure"]."°"; ?>
+                    </span>
                 </div>
                 <div class="box">
-                    test
+                    <div style="align-items: center; display: flex;">
+                        <img src="./assets/air-pump.gif" alt="air-pump" style="height: 1.5rem; width: 1.5rem;">
+                    <span style="margin-left: .5rem;">Precipitation</span>
+                    </div>
+                    <span style="margin-left: 2rem; font-weight: 600; font-size: 1.5rem; line-height: 2rem;">
+                        <?php echo (float) $data["list"]["0"]["pop"]*100 ."%"; ?>
+                    </span>
                 </div>
                 <div class="box">
-                    test
+                    <div style="align-items: center; display: flex;">
+                        <img src="./assets/air-pump.gif" alt="air-pump" style="height: 1.5rem; width: 1.5rem;">
+                    <span style="margin-left: .5rem;">Pressure</span>
+                    </div>
+                    <span style="margin-left: 2rem; font-weight: 600; font-size: 1.5rem; line-height: 2rem;">
+                        <?php echo $data["list"]["0"]["pressure"]."°"; ?>
+                    </span>
                 </div>
                 <div class="box">
-                    test
+                    <div style="align-items: center; display: flex;">
+                        <img src="./assets/air-pump.gif" alt="air-pump" style="height: 1.5rem; width: 1.5rem;">
+                    <span style="margin-left: .5rem;">Pressure</span>
+                    </div>
+                    <span style="margin-left: 2rem; font-weight: 600; font-size: 1.5rem; line-height: 2rem;">
+                        <?php echo $data["list"]["0"]["pressure"]."°"; ?>
+                    </span>
                 </div>
                 <div class="box">
                     test
