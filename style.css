@@ -1,8 +1,10 @@
 * {
     font-feature-settings: normal;
-    border: 0 solid #e5e7eb;
     box-sizing: border-box;
     font-family: sans-serif;
+
+    align-items: center;
+    border: 0;
 }
 body {
     background-color: #F3F4F6;
@@ -11,21 +13,40 @@ body {
     margin: 0;
 }
 .data-box {
-    max-width: 100%;
-
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
 
 
+.icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.s-text {
+    margin-left: .5rem;
+}
+.flex {
+    display: flex;
+}
+.flex-rel {
+    display: flex;
+    position: relative;
+}
+
+/* colors */
+.c-maim {
+    background-color: #F3F4F6;
+}
+.c-box {
+    background-color: #FFFFFF;
+}
+.c-shadows {
+    box-shadow: #c2c9d1 0px 8px 24px;
+}
+
 /* -- header -- */
 header {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-
-    background-color: #FFFFFF;
-    box-shadow: #c2c9d1 0px 8px 24px;
 
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
@@ -36,23 +57,12 @@ header {
 }
 
 /* left-hedbox */
-.left-hedbox {
-    display: flex;
-    align-items: center;
-}
 .left-hedbox button{
     padding: .5rem;
     margin-right: .75rem;
 
     background-color: initial;
     background-image: none;
-}
-.left-hedbox button svg{
-    display: block;
-    color: #4B5563;
-
-    width: 1.5rem;
-    height: 1.5rem;
 }
 .left-hedbox h1{
     color: #3B82F6;
@@ -65,25 +75,13 @@ header {
 }
 .left-hedbox img {
     margin-left: 3.5rem;
-
-    width: 1.5rem;
-    height: 1.5rem;
 }
 .left-hedbox span {
     margin-left: .25rem;
-    color: #1F2937;
 }
 
 /* center-hedbox */
-.center-hedbox {
-    display: flex;
-    align-items: center;
-}
 .center-hedbox button{
-    display: flex;
-    align-items: center;
-    position: relative;
-
     background-color: #1F2937;
     color: #E5E7EB;
 
@@ -110,18 +108,9 @@ header {
     font-size: medium;
 }
 .serch-div {
-    display: flex;
-    align-items: center;
-    position: relative;
-
     border: 2px solid #e5e7eb;
     box-sizing: border-box;
     border-radius: .5rem;
-}
-.serch-div form {
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 .serch-div form input {
     font-size: .875rem;
@@ -135,28 +124,18 @@ header {
 .serch-div form svg {
     width: 1rem; 
     height: 1rem;
-
     left: .5rem;
 
     position: absolute;
 }
 .serch-div img {
-    width: 1.5rem;
-    height: 1.5rem;
-
     left: 90%;
-
     position: absolute;
 }
 
 /* right-hedbox */
-.right-hedbox {
-    display: flex;
-    align-items: center;
-}
 .right-hedbox button {
     padding: .5rem;
-    background-color: #FFFFFF;
 }
 .right-hedbox img {
     height: 1.75rem;
@@ -171,19 +150,18 @@ main {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, 1.5fr);
 
-    align-items: center;
     margin-top: 2.5rem;
 }
-.box {
-    background-color: #FFFFFF;
-    box-shadow: #c2c9d1 0px 8px 24px;
 
+/* box */
+.box {
     padding: 1.5rem;
     border-radius: .5rem;
 
     width: 100%;
     height: 100%;
 }
+
 .box-1 {
     grid-column: 1 / 4;
     grid-row: 1 / 3;
