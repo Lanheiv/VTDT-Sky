@@ -21,4 +21,3 @@ function WindDirection($deg) {
 
     return $direction[floor($result)];
 }
-?>
