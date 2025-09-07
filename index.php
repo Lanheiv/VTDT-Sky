@@ -1,9 +1,4 @@
-<?php
-    include "Functions.php";
-    $weatherData = file_get_contents("https://emo.lv/weather-api/forecast/?city=cesis,latvia");
-    $data = json_decode($weatherData, true);
-    $DayPart = DayTime()
-?>
+<?php include "Functions.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,7 +56,7 @@
                         <div style="font-size: .75rem; line-height: 1.25rem;">Current Weather</div>
                         <div style="font-weight: 500; font-size: 1.25rem; line-height: 1.75rem;">Local time: <?php echo date("h:i A") ?></div> <!-- vēlāk partaisīt par JS -->
                         <div class="flex">
-                            <img src="./assets/wheder/<?php echo $DayPart ?>.png" alt="wheder" style="width: 2.5rem; height: 2.5rem;">
+                            <img src="./assets/wheder/<?php echo $DayPart ?>.png" alt="wheder" style="width: 2.5rem; height: 2.5pgprem;">
                             <div style="font-weight: 600; font-size: 3rem; line-height: 1; padding-left: .75rem;"><?php echo $data['list']['0']['temp'][$DayPart]; ?></div>
                             <div style="font-weight: 600; font-size: 1.5rem; line-height: 2rem; padding-right: .5rem; margin-bottom: .5rem;">°C</div>
                             <div class="flex" style="font-size: .875rem; line-height: 1.25rem; padding-left: 1.5rem; flex-direction: column; align-items: normal;">
@@ -70,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    <p style="margin-top: 3rem;">Current wind direction: SE</p>
+                    <p style="margin-top: 3rem;">Current wind direction: <?php echo WindDirection($data['list']['0']['deg']); ?></p>
                 </div>
                 <div class="box c-box c-shadows box-2">
                     test 2
