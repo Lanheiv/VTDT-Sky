@@ -19,8 +19,8 @@
                     </button>
 
                     <h1>VTDT Sky</h1>
-                    <img src="./assets/google-maps.gif" alt="google maps" class="icon">
-                    <span><?php echo $data['city']['name'].", ".$data['city']['country']; ?></span>
+                    <img src="./assets/google-maps.gif" alt="google maps" class="icon location">
+                    <span class="location"><?php echo $data['city']['name'].", ".$data['city']['country']; ?></span>
                 </div>
                 <div class="center-hedbox flex-rel">
                     <div class="serch-div flex-rel">
@@ -41,12 +41,12 @@
                     </button>
                 </div>
                 <div class="right-hedbox flex">
-                    <button class="c-box">
-                        <img src="./assets/notification.gif" alt="notification gif">
+                    <button class="c-box notification">
+                        <img class="notification" src="./assets/notification.gif" alt="notification gif">
                     </button>
 
-                    <button class="c-box">
-                        <img src="./assets/settings.gif" alt="settings gif" style="margin-left: 1rem;">
+                    <button class="c-box settings">
+                        <img class="settings" src="./assets/settings.gif" alt="settings" style="margin-left: 1rem;">
                     </button>
                 </div>
             </header>
@@ -54,7 +54,7 @@
                 <div class="box c-box c-shadows box-1">
                     <div>
                         <div class="cor-wh">Current Weather</div>
-                        <div class="cor-tm">Local time: <?php echo date("h:i A") ?></div>
+                        <div class="cor-tm" id="clock"></div>
                         <div class="flex">
                             <img src="./assets/wheder/<?php echo $DayPart ?>.png" alt="wheder" class="bg-icon">
                             <div class="cor-dp"><?php echo $data['list']['0']['temp'][$DayPart]; ?></div>

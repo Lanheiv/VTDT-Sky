@@ -16,3 +16,30 @@ function SwichModes() {
         Light()
     }
 }
+
+function Time() {
+    let date = new Date();
+
+    let h = date.getHours();
+    let m = date.getHours();
+    let session = "AM";
+
+    if (h == 0) {
+        h = 12;
+    } if(h > 12) {
+        h = h - 12;
+        session = "PM";
+    }
+
+    if (h < 10) {
+        h = "0" + h;
+    } if (m < 10) {
+        m = "0" + m;
+    }
+
+    let result =  h + ":" + m + " " + session;
+    document.getElementById("clock").textContent = "Local time: " + result;
+}
+
+Time();
+setTimeout(Time, 60000);
