@@ -48,6 +48,29 @@ body {
     box-shadow: #c2c9d1 0px 8px 24px;
 }
 
+html[theam="light"] {
+    body {
+        background-color: #1b1a1a;
+        color: #FFFFFF;
+    }
+    .c-maim {
+        background-color: #43434a;
+    }
+    .c-box {
+        background-color: #141414;
+    }
+    .c-shadows {
+        box-shadow: #353739 0px 8px 24px;
+    }
+    .c-shadows {
+    box-shadow: #000000 0px 8px 24px;
+    }
+    .menu {
+        color: #FFFFFF;
+    }
+}
+
+
 /* -- header -- */
 header {
     justify-content: space-between;

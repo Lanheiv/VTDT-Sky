@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <title>VTDT SKY</title>
 </head>
-<body class="light"> <!-- light / dark -->
+<body>
     <div class="root">
         <div class="data-box">
             <header class="flex c-box c-shadows">
                 <div class="left-hedbox flex">
                     <button>
                         <svg viewBox=" 24" xmlns="http://www.w3.org/2000/svg" class="icon">
-                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-linecap="round"></path>
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" class="menu"></path>
                         </svg>
                     </button>
 
@@ -33,11 +33,11 @@
                         <img src="./assets/worldwide.gif" alt="worldwide gif" class="icon">
                     </div>
 
-                    <button class="flex">
+                    <button class="flex" onclick="SwichModes()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
+                            <path id="swich_path" stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"></path>
                         </svg>
-                        <span>Light</span>
+                        <span id="swich">Light</span>
                     </button>
                 </div>
                 <div class="right-hedbox flex">
@@ -68,7 +68,6 @@
                     <p style="margin-top: 3rem;">Current wind direction: <?php echo WindDirection($data['list']['0']['deg']); ?></p>
                 </div>
                 <div class="box c-box c-shadows box-2">
-                    test 2
                 </div>
                 <div class="box c-box c-shadows">
                     <div class="flex">
@@ -132,5 +131,7 @@
             </main>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
