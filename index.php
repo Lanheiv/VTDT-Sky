@@ -57,17 +57,23 @@
                         <div class="cor-tm" id="clock"></div>
                         <div class="flex">
                             <img src="./assets/wheder/<?php echo $DayPart ?>.png" alt="wheder" class="bg-icon">
-                            <div class="cor-dp"><?php echo $data['list']['0']['temp'][$DayPart]; ?></div>
+                            <div class="cor-dp"><?php echo $data['list'][$Day]['temp'][$DayPart]; ?></div>
                             <div class="cor-tem">°C</div>
                             <div class="flex cor-fl">
-                                <div><?php echo ucfirst($data['list']['0']['weather']['0']['description']); ?></div>
-                                <div>Feels Like <?php echo $data['list']['0']['feels_like'][$DayPart]; ?>°C</div>
+                                <div><?php echo ucfirst($data['list'][$Day]['weather']['0']['description']); ?></div>
+                                <div>Feels Like <?php echo $data['list'][$Day]['feels_like'][$DayPart]; ?>°C</div>
                             </div>
                         </div>
                     </div>
-                    <p style="margin-top: 3rem;">Current wind direction: <?php echo WindDirection($data['list']['0']['deg']); ?></p>
+                    <p style="margin-top: 3rem;">Current wind direction: <?php echo WindDirection($data['list'][$Day]['deg']); ?></p>
                 </div>
                 <div class="box c-box c-shadows box-2">
+                    <div class="flex chois">
+                        <button id="today-button">Today</button>
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
                 <div class="box c-box c-shadows">
                     <div class="flex">
@@ -75,7 +81,7 @@
                         <span class="s-text">Humidity</span>
                     </div>
                     <span class="data">
-                        <?php echo $data["list"]["0"]["humidity"]."%"; ?>
+                        <?php echo $data["list"][$Day]["humidity"]."%"; ?>
                     </span>
                 </div>
                 <div class="box c-box c-shadows">
@@ -84,7 +90,7 @@
                     <span class="s-text">Pressure</span>
                     </div>
                     <span class="data">
-                        <?php echo $data["list"]["0"]["pressure"]."°"; ?>
+                        <?php echo $data["list"][$Day]["pressure"]."°"; ?>
                     </span>
                 </div>
                 <div class="box c-box c-shadows">
@@ -93,7 +99,7 @@
                     <span class="s-text">Precipitation</span>
                     </div>
                     <span class="data">
-                        <?php echo (float) $data["list"]["0"]["pop"]*100 ."%"; ?>
+                        <?php echo (float) $data["list"][$Day]["pop"]*100 ."%"; ?>
                     </span>
                 </div>
                 <div class="box c-box c-shadows">
@@ -102,7 +108,7 @@
                     <span class="s-text">Clouds</span>
                     </div>
                     <span class="data">
-                        <?php echo $data["list"]["0"]["clouds"]."%"; ?>
+                        <?php echo $data["list"][$Day]["clouds"]."%"; ?>
                     </span>
                 </div>
                 <div class="box c-box c-shadows">
@@ -111,7 +117,7 @@
                     <span class="s-text">Max Wind Speed</span>
                     </div>
                     <span class="data">
-                        <?php echo $data["list"]["0"]["gust"]."m/s"; ?>
+                        <?php echo $data["list"][$Day]["gust"]."m/s"; ?>
                     </span>
                 </div>
                 <div class="box c-box c-shadows">
@@ -120,7 +126,7 @@
                     <span class="s-text">Average Wind Speed</span>
                     </div>
                     <span class="data">
-                        <?php echo $data["list"]["0"]["speed"]."m/s"; ?>
+                        <?php echo $data["list"][$Day]["speed"]."m/s"; ?>
                     </span>
                 </div>
                 <div class="flex box c-box c-shadows box-9">

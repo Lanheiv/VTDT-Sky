@@ -2,6 +2,18 @@
 $weatherData = file_get_contents("https://emo.lv/weather-api/forecast/?city=cesis,latvia");
 $data = json_decode($weatherData, true);
 $DayPart = DayTime();
+$Day = CheckDay($data);
+
+function CheckDay($val) {
+    $count = 0;
+    foreach($val["list"] as $val) {
+         $count++;
+         if (date('d/m', $val["dt"]) == date('d/m')) {
+            return $count;
+            break;
+         }
+    }
+}
 
 function DayTime() {
     if (date('H') >= 6 && date('H') < 12) {

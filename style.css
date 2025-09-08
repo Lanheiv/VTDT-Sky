@@ -246,6 +246,16 @@ main {
     align-items: normal;
 }
 
+
+.chois {
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+#today-button {
+    font-weight: 600;
+    padding-bottom: .25rem;
+}
+
 @media only screen and (max-width: 890px) {
     main {
         grid-template-columns: repeat(3, 1fr);
